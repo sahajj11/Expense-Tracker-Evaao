@@ -9,6 +9,13 @@ This repository contains the code for a full-stack web application designed to h
 * **Web Interface:** An accessible and responsive user interface for managing financial data.
 * **Data Persistence:** Handles storing and retrieving expense data via a backend API.
 
+## 🔗 Live Demo
+
+The application is deployed and available for use here:
+
+**[https://expense-tracker-evaao.vercel.app](https://expense-tracker-evaao.vercel.app)**
+
+
 ## 🛠️ Technology Stack
 
 The project is a full-stack application relying primarily on JavaScript for both the frontend and backend.
@@ -78,8 +85,4 @@ You will need the following software installed on your machine:
     ```
     The frontend application will start (typically on `http://localhost:3000`) and should automatically open in your browser. It will connect to the backend server to fetch and save data.
 
-## 🔗 Live Demo
 
-The application is deployed and available for use here:
-
-**[https://expense-tracker-evaao.vercel.app](https://expense-tracker-evaao.vercel.app)**
