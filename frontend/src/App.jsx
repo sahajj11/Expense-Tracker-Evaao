@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import AddExpenseForm from './AddExpenseForm';
 import ExpenseTable from './ExpenseTable';
-import EditExpenseForm from './EditExpenseForm';
 
 
 
 
 const App = () => {
   const [expenses, setExpenses] = useState([]);
-  
 
   const addExpense = (newExpense) => {
     
@@ -19,9 +17,6 @@ const App = () => {
   const deleteExpense = (id) => {
     setExpenses(expenses.filter(expense => expense.id !== id));
   };
-
-  
-
   
  
   const totalSpent = expenses.reduce((acc, exp) => acc + exp.amount, 0).toFixed(2);
@@ -45,11 +40,9 @@ const App = () => {
             expenses={expenses} 
             onDeleteExpense={deleteExpense} 
             totalSpent={totalSpent}
-           
           />
         </div>
       </main>
-      
     </div>
   );
 };

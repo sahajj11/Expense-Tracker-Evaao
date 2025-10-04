@@ -21,7 +21,7 @@ const AddExpenseForm = ({ onAddExpense }) => {
     const newExpense = {
       amount: parseFloat(amount),
       date,
-      note,
+      note : note || "",
       category,
     };
 
@@ -37,9 +37,10 @@ const AddExpenseForm = ({ onAddExpense }) => {
       setNote('');
       setDate(new Date().toISOString().split('T')[0]);
       setCategory(categories[0]);
+      alert("Expense Added")
     } catch (error) {
       console.error(error);
-      alert('Failed to add expense');
+      alert('All Fiels are required');
     } finally {
       setLoading(false);
     }
