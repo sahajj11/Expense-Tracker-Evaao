@@ -81,7 +81,7 @@ You will need the following software installed on your machine:
 2.  **Start the Frontend Client:**
     From the `frontend/` directory:
     ```bash
-    npm start 
+    npm run dev 
     ```
     The frontend application will start (typically on `http://localhost:3000`) and should automatically open in your browser. It will connect to the backend server to fetch and save data.
 
