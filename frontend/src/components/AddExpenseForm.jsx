@@ -27,7 +27,7 @@ const AddExpenseForm = ({ onAddExpense }) => {
 
     try {
       setLoading(true);
-      const res = await axios.post('http://localhost:5000/api', newExpense);
+      const res = await axios.post('https://expense-tracker-evaao-1.onrender.com/api', newExpense);
       
       // Add to local state
       onAddExpense(res.data);

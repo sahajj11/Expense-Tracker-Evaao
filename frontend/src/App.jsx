@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import AddExpenseForm from './AddExpenseForm';
-import ExpenseTable from './ExpenseTable';
+import AddExpenseForm from './components/AddExpenseForm';
+import ExpenseTable from './components/ExpenseTable';
+
 
 
 
@@ -36,7 +37,7 @@ const App = () => {
 
        
         <div className="bg-white p-6 rounded-xl shadow-lg">
-          <ExpenseTable 
+          <ExpenseTable
             expenses={expenses} 
             onDeleteExpense={deleteExpense} 
             totalSpent={totalSpent}

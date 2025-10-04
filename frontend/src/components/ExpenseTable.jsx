@@ -21,7 +21,7 @@ const ExpenseTable = ({ onDeleteExpense }) => {
   const fetchExpenses = async () => {
     try {
       setLoading(true);
-      const res = await axios.get('http://localhost:5000/api/'); 
+      const res = await axios.get('https://expense-tracker-evaao-1.onrender.com/api/'); 
       setExpenses(res.data);
       setLoading(false);
     } catch (err) {
@@ -34,7 +34,7 @@ const ExpenseTable = ({ onDeleteExpense }) => {
   const handleDelete = async (_id) => {
     if (window.confirm('Are you sure you want to delete this expense?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/${_id}`);
+        await axios.delete(`https://expense-tracker-evaao-1.onrender.com/api/${_id}`);
         setExpenses(expenses.filter((e) => e._id !== _id));
         if (onDeleteExpense) onDeleteExpense(_id);
       } catch (err) {
@@ -58,7 +58,7 @@ const ExpenseTable = ({ onDeleteExpense }) => {
   // Save edited expense
   const handleEditSave = async (_id) => {
     try {
-      const res = await axios.put(`http://localhost:5000/api/${_id}`, editData);
+      const res = await axios.put(`https://expense-tracker-evaao-1.onrender.com/api/${_id}`, editData);
       setExpenses(expenses.map((e) => (e._id === _id ? res.data : e)));
       setEditId(null); // Exit edit mode
     } catch (err) {

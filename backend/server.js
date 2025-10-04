@@ -14,6 +14,10 @@ app.use(express.json())
 
 connectDb()
 
+app.get("/",(req,res)=>{
+    res.send("Server is running")
+})
+
 app.use("/api",expenseRouter)
 
 app.listen(PORT,()=>{
